@@ -1,7 +1,14 @@
-const Button = ({ children, className }: { children: React.ReactNode, className: string }) => {
+
+interface ButtonProps {
+    children : React.ReactNode
+    className? : string
+    onclick : () => void
+}
+
+const Button = ({ children, className, onclick }: ButtonProps) => {
 
     return (
-        <button className={`px-11 py-3 rounded-md ${className}`} >{children}</button>
+        <button onClick={onclick} className={`px-11 py-3 rounded-md ${className}`} >{children}</button>
     )
 };
 
