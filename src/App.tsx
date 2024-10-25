@@ -1,5 +1,6 @@
 import Home from "./components/UI/Home"
 import Navbar from "./components/UI/Navbar"
+import About from "./components/UI/About"
 import Skills from "./components/UI/Skills"
 import "./index.css"
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Home />
       <Skills />
+      <About />
     </div>
   )
 }

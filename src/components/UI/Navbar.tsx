@@ -7,9 +7,10 @@ const Navbar = () => {
                     <h2>Abya laxx</h2>
                 </div>
                 <div className="flex flex-row gap-16 h-full text-white font-semibold">
-                    <a href="" className="h-full">Home</a>
+                    <a href="#home" className="h-full">Home</a>
+                    <a href="#skill" className="h-full">Skills</a>
+                    <a href="#about" className="h-full">About</a>
                     <a href="" className="h-full">Portfolio</a>
-                    <a href="" className="h-full">Profile</a>
                     <a href="" className="h-full">Blog</a>
                 </div>
             </div>

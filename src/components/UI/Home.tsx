@@ -29,7 +29,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="flex p-32 pt-0">
+        <div className="flex p-32 pt-0" id="home">
             {visible && (
                 <button onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }} className="fixed bottom-10 right-10 bg-white p-2 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" fill="black" fontWeight={"bold"} className="bi bi-chevron-right transform -rotate-90" viewBox="0 0 16 16">
