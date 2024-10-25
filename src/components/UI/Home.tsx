@@ -2,8 +2,6 @@ import Button from "./Button";
 
 const Home = () => {
 
-    const biografi = import.meta.env.VITE_BIOGRAFI
-
     return (
         <div className="flex p-32 pt-44">
             <div className="flex-1 flex flex-col gap-2">
@@ -12,7 +10,10 @@ const Home = () => {
                 <p className="text-[#808080] text-xl font-semibold mb-10">Fullstack developer</p>
                 <hr className="text-[#808080] w-1/3" />
                 <p className="text-xl text-[#808080] font-semibold">
-                    {biografi}
+                    Computer Engineering student who is enthusiastic and has a passion for the software development.
+                    Known as a perfectionist and meticulous person, with strong analytical skills.
+                    Always try to provide the best results in every project undertaken, with a focus on improving technical skills and knowledge in the computer field.
+                    Committed to continuing to learn and develop in the dynamic technology industry.
                 </p>
                 <div className="mt-7 flex gap-5">
                     <Button className="bg-green-500 font-semibold text-white text-xl">
@@ -31,7 +32,7 @@ const Home = () => {
                     <div className="w-full h-full bg-green-400 absolute top-0 left-0"></div>
                 </div>
                 {/* <!-- Profile Image --> */}
-                <img src="../../../public/assets/profile1.png" alt="Profile" className="relative object-cover object-center z-10 w-96 h-96 rounded-full border-4 border-gray-800" />
+                <img src="../../assets/profile1.png" alt="Profile" className="relative object-cover object-center z-10 w-96 h-96 rounded-full border-4 border-gray-800" />
                 <h2 className="relative text-2xl text-white font-bold">Let's Connect </h2>
                 <div className="relative flex text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
