@@ -32,7 +32,7 @@ const Home = () => {
                     <div className="w-full h-full bg-green-400 absolute top-0 left-0"></div>
                 </div>
                 {/* <!-- Profile Image --> */}
-                <img src="../../assets/profile1.png" alt="Profile" className="relative object-cover object-center z-10 w-96 h-96 rounded-full border-4 border-gray-800" />
+                <img src="profile1.png" alt="Profile" className="relative object-cover object-center z-10 w-96 h-96 rounded-full border-4 border-gray-800" />
                 <h2 className="relative text-2xl text-white font-bold">Let's Connect </h2>
                 <div className="relative flex text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
