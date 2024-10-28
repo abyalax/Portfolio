@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App';
 import Blog from './components/pages/Blog';
-import Portfolio from './components/pages/Portfolio';
+import Portfolio from './components/pages/Portfolios';
 
 const routes = [
   {

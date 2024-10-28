@@ -12,12 +12,29 @@ import git from "./tools/git.webp"
 import github from "./tools/github.webp"
 import js from "./tools/js.webp"
 import nextjs from "./tools/nextjs.png"
+import webProfile from "./img/web-profile.png"
+import tokopedia from "./img/tokopedia.png"
+import blogCMS from "./img/blog-cms.png"
+import githubIcon from "./svg/github.svg"
+import linkIcon from "./svg/link.svg"
+import groqDark from "./img/groq-dark.png"
+import groqLight from "./img/groq-light.png"
+import groq from "./img/groq.png"
 
-const svg = {
+const tools = {
     nodejs, html, css, ts, vscode, react, tailwinds,
     postman, mongodb, cloudinary, git, github, js,
     nextjs
 }
 
+const projects = {
+    webProfile, tokopedia, blogCMS, groqLight,
+    groqDark, groq
+}
 
-export default svg
+const svgIcon = {
+    githubIcon, linkIcon
+}
+
+
+export { tools, projects, svgIcon }

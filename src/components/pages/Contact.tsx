@@ -34,25 +34,25 @@ const Contact = () => {
 
     return (
         <div>
-            <h2 className="text-white text-5xl my-10 text-center font-semibold">Contact Me</h2>
-            <div className="px-44 flex gap-16 min-h-96">
+            <h2 className="text-white lg:text-5xl sm:text-3xl text-xl my-6  text-center font-semibold">Contact Me</h2>
+            <div className="md:px-44 lg:flex lg:flex-row md:flex md:gap-16 flex flex-col min-h-96">
                 <div className="w-full text-white p-4">
-                    <h2 className="text-3xl font-semibold mb-4 text-center">Let's Get in Touch</h2>
-                    <p className="text-center mt-4 mb-14 text-[#808080]">
+                    <h2 className="sm:text-3xl text-lg my-6 font-semibold mb-4 text-center">Let's Get in Touch</h2>
+                    <p className="text-center mt-4 sm:mb-12 mb-2 text-[#808080] text-sm sm:text-base">
                         I’m currently looking for any new opportunities, my inbox is always open.
                         Whether you have a question or just want to say hi, I’ll try my best to get back to you!
                     </p>
-                    <h2 className="text-xl font-semibold my-2 text-center">Address</h2>
-                    <p className="text-center text-[#808080]">Plemahan Sub-district, Kediri Regency, East Java, Indonesia</p>
-                    <h2 className="text-xl font-semibold my-2 text-center">Phone</h2>
-                    <p className="text-center text-[#808080]">+62 877 6529 0292</p>
-                    <h2 className="text-xl font-semibold my-2 text-center">Email</h2>
-                    <p className="text-center text-[#808080]">abyalaxx@gmail.com</p>
+                    <h2 className="font-semibold sm:my-2 sm:text-lg text-sm text-center">Address</h2>
+                    <p className="text-center text-[#808080] text-sm sm:text-base">Plemahan Sub-district, Kediri Regency, East Java, Indonesia</p>
+                    <h2 className="font-semibold sm:my-2 sm:text-lg text-sm text-center">Phone</h2>
+                    <p className="text-center text-[#808080] text-sm sm:text-base">+62 877 6529 0292</p>
+                    <h2 className="font-semibold sm:my-2 sm:text-lg text-sm text-center">Email</h2>
+                    <p className="text-center text-[#808080] text-sm sm:text-base">abyalaxx@gmail.com</p>
                 </div>
 
 
                 <div className=" w-full shadow-2xl shadow-black text-white">
-                    <form className="flex flex-col gap-6 p-10" onSubmit={handleSubmit}>
+                    <form className="flex flex-col gap-6 sm:p-10 p-6" onSubmit={handleSubmit}>
                         <input className="min-h-11 bg-transparent focus:outline-none border-b-2 border-slate-500 appearance-none" name="name" type="text" placeholder="Your Name" onChange={(e) => setForm({ ...formState, from_name: e.target.value })} />
                         <input className="min-h-11 bg-transparent focus:outline-none border-b-2 border-slate-500 appearance-none" type="email" name="email" placeholder="Your Email" onChange={(e) => setForm({ ...formState, from_email: e.target.value })} />
                         <input className="min-h-11 bg-transparent focus:outline-none border-b-2 border-slate-500 appearance-none" type="number" min={9} name="phone" placeholder="Your Phone" onChange={(e) => setForm({ ...formState, from_phone: e.target.value })} />

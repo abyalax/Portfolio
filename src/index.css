@@ -6,8 +6,11 @@
 *,
 html,
 body {
+  padding: 0;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 /* Menyembunyikan spinner di input bertipe number */
@@ -26,15 +29,18 @@ input[type=number] {
 
 /* Menyembunyikan scrollbar pada textarea */
 textarea {
-  overflow: hidden; /* Menyembunyikan scrollbar */
+  overflow: hidden;
+  /* Menyembunyikan scrollbar */
 }
 
 /* Untuk Webkit (Chrome, Safari) */
 textarea::-webkit-scrollbar {
-  display: none; /* Menyembunyikan scrollbar */
+  display: none;
+  /* Menyembunyikan scrollbar */
 }
 
 /* Untuk Firefox */
 textarea {
-  scrollbar-width: none; /* Menyembunyikan scrollbar */
+  scrollbar-width: none;
+  /* Menyembunyikan scrollbar */
 }
