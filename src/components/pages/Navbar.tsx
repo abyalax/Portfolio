@@ -10,8 +10,8 @@ const Navbar = () => {
                     <a href="#home" className="h-full">Home</a>
                     <a href="#skill" className="h-full">Skills</a>
                     <a href="#about" className="h-full">About</a>
-                    <a href="" className="h-full">Portfolio</a>
-                    <a href="" className="h-full">Blog</a>
+                    <a href="/portfolio" className="h-full">Portfolio</a>
+                    <a href="/blog" className="h-full">Blog</a>
                 </div>
             </div>
             <hr style={{borderColor: 'gray', marginTop: '20px'}} />

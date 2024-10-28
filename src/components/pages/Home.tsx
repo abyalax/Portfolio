@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Button from "./Button";
 
 const Home = () => {
     const [visible, setVisible] = useState(false);
@@ -33,7 +32,7 @@ const Home = () => {
             {visible && (
                 <button onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }} className="fixed bottom-10 right-10 bg-white p-2 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" fill="black" fontWeight={"bold"} className="bi bi-chevron-right transform -rotate-90" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                        <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                     </svg>
                 </button>
             )}
@@ -49,12 +48,12 @@ const Home = () => {
                     Committed to continuing to learn and develop in the dynamic technology industry.
                 </p>
                 <div className="mt-7 flex gap-5">
-                    <Button onclick={onButtonClick} className="bg-green-500 font-semibold text-white text-xl">
+                    <button onClick={onButtonClick} className="bg-green-500 font-semibold text-white text-xl px-11 py-3 rounded-md">
                         Donwload CV
-                    </Button>
-                    <Button onclick={() => alert("coming soon")} className="bg-transparent border text-white font-semibold text-xl">
+                    </button>
+                    <button onClick={() => alert("coming soon")} className="bg-transparent border text-white font-semibold text-xl px-11 py-3 rounded-md">
                         Details
-                    </Button>
+                    </button>
                 </div>
             </div>
             <div className="flex flex-col relative items-center justify-center">
@@ -65,7 +64,7 @@ const Home = () => {
                     <div className="w-full h-full bg-green-400 absolute top-0 left-0"></div>
                 </div>
                 {/* <!-- Profile Image --> */}
-                <img src="profile1.png" alt="Profile" className="relative object-cover object-center z-10 w-96 h-96 rounded-full border-4 border-gray-800" />
+                <img src="profile1.png" alt="Profile" className="relative object-cover object-center z-10 w-96 h-96 rounded-full border-4 border-slate-500" />
                 <h2 className="relative text-2xl text-white font-bold">Let's Connect </h2>
                 <div className="relative flex gap-3 mt-2 text-white">
                     <svg onClick={() => window.open("https://www.instagram.com/abya.xc/profilecard/?igsh=ZzVpeGUzZGNjczBi", "_blank")} xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-instagram cursor-pointer" viewBox="0 0 16 16">

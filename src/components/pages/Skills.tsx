@@ -26,19 +26,19 @@ const Skills = () => {
             <motion.div ref={ref} variants={boxVariant} initial='hidden' animate={control} className="mt-10 px-44 flex flex-col gap-8">
                 <h2 className="text-white text-5xl my-10 mx-auto font-semibold">Tech Stack</h2>
                 <div className="flex flex-row justify-center gap-8">
-                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                         <img src={svg.nodejs} />
                     </div>
-                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                         <img src={svg.nextjs} />
                     </div>
-                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                         <img src={svg.react} />
                     </div>
-                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                         <img src={svg.js} />
                     </div>
-                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                    <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                         <img src={svg.ts} />
                     </div>
                 </div>
@@ -46,35 +46,35 @@ const Skills = () => {
                 {visible && (
                     <>
                         <div className="flex flex-row justify-center gap-8">
-                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <img src={svg.html} />
                             </div>
-                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <img src={svg.css} />
                             </div>
-                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <img src={svg.tailwinds} />
                             </div>
-                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <img src={svg.mongodb} />
                             </div>
-                            <div className="w-44 h-44 p-5 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-5 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <div className="bg-[#a5d6f7] rounded-3xl">
                                     <img src={svg.cloudinary} />
                                 </div>
                             </div>
                         </div>
                         <div className="flex flex-row justify-center gap-8">
-                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <img src={svg.vscode} />
                             </div>
-                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <img src={svg.postman} />
                             </div>
-                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <img src={svg.git} />
                             </div>
-                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl ">
+                            <div className="w-44 h-44 p-3 bg-[#323131] border-4 border-[#404040] flex justify-center items-center rounded-3xl hover:transform hover:scale-110 cursor-pointer">
                                 <img src={svg.github} />
                             </div>
                         </div>
