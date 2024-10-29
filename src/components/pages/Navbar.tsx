@@ -15,7 +15,6 @@ const Navbar = () => {
                     <Link to="/blog" className="h-full">Blog</Link>
                 </div>
             </div>
-            {/* <hr style={{ borderColor: 'gray', marginTop: '20px' }} /> */}
         </div>
     )
 };

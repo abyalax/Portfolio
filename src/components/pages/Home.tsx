@@ -51,7 +51,7 @@ const Home = () => {
                     <button onClick={onButtonClick} className="bg-green-500 font-semibold text-white lg:text-xl sm:text-lg px-11 py-3 rounded-md">
                         Donwload CV
                     </button>
-                    <button onClick={() => alert("coming soon")} className="bg-transparent border text-white font-semibold lg:text-xl sm:text-lg px-11 py-3 rounded-md">
+                    <button  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent border text-white font-semibold lg:text-xl sm:text-lg px-11 py-3 rounded-md">
                         Details
                     </button>
                 </div>

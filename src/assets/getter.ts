@@ -17,8 +17,6 @@ import tokopedia from "./img/tokopedia.png"
 import blogCMS from "./img/blog-cms.png"
 import githubIcon from "./svg/github.svg"
 import linkIcon from "./svg/link.svg"
-import groqDark from "./img/groq-dark.png"
-import groqLight from "./img/groq-light.png"
 import groq from "./img/groq.png"
 
 const tools = {
@@ -28,8 +26,8 @@ const tools = {
 }
 
 const projects = {
-    webProfile, tokopedia, blogCMS, groqLight,
-    groqDark, groq
+    webProfile, tokopedia, blogCMS,
+    groq
 }
 
 const svgIcon = {
