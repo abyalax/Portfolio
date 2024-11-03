@@ -1,10 +1,11 @@
+import "./index.css"
 import Home from "./pages/Home"
 import Navbar from "./components/fragments/Navbar"
-import About from "./pages/About"
-import Skills from "./pages/Skills"
-import "./index.css"
-import Contact from "./pages/Contact"
-import Footer from "./pages/Footer"
+import About from "./components/fragments/About"
+import Skills from "./components/fragments/Skills"
+import Contact from "./components/fragments/Contact"
+import Footer from "./components/fragments/Footer"
+import Featured from "./components/fragments/Featured"
 function App() {
 
   return (
@@ -13,8 +14,9 @@ function App() {
       <Home />
       <Skills />
       <About />
-      <Contact/>
-      <Footer/>
+      <Featured />
+      <Contact />
+      <Footer />
     </div>
   )
 }

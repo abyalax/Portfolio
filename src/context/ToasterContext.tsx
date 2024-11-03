@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-import Toaster from "../components/fragments/Toaster"
+import Toaster from "../components/ui/Toaster"
 
 const ToasterContext = createContext({
     toaster: {},
