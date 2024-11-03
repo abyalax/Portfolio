@@ -1,6 +1,9 @@
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useContext, useEffect, useState } from "react";
+import { ToasterContext } from "../context/ToasterContext";
 
 const Contact = () => {
+    const { setToaster } = useContext(ToasterContext)
+    const [isLoading, setIsLoading] = useState(false);
     const [formState, setForm] = useState({
         to_name: "Abya",
         from_name: "",
@@ -15,21 +18,39 @@ const Contact = () => {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(formState);
-        console.log(import.meta.env);
-        fetch('https://api.emailjs.com/api/v1.0/email/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-
-            body: JSON.stringify({
-                service_id: import.meta.env.VITE_SERVICE_ID,
-                template_id: import.meta.env.VITE_TEMPLATE_ID,
-                user_id: import.meta.env.VITE_USER_ID,
-                template_params: formState
+        try {
+            setIsLoading(true);
+            fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+    
+                body: JSON.stringify({
+                    service_id: import.meta.env.VITE_SERVICE_ID,
+                    template_id: import.meta.env.VITE_TEMPLATE_ID,
+                    user_id: import.meta.env.VITE_USER_ID,
+                    template_params: formState
+                })
+            }).then((result) => {
+                if (result.ok) {
+                    setToaster({variant: 'success', message: 'Email sent successfully'});
+                } else {
+                    setToaster({variant: 'danger', message: 'Failed to send email, please try again'});
+                }
             })
-        })
+        } catch (error) {
+            console.log(error);   
+        } finally {
+            setIsLoading(false);
+            setForm({
+                to_name: "Abya",
+                from_name: "",
+                from_email: "",
+                from_phone: "",
+                message: "",
+            });
+        }
     }
 
     return (
@@ -58,7 +79,7 @@ const Contact = () => {
                         <input className="min-h-11 bg-transparent focus:outline-none border-b-2 border-slate-500 appearance-none" type="number" min={9} name="phone" placeholder="Your Phone" onChange={(e) => setForm({ ...formState, from_phone: e.target.value })} />
                         <textarea className="bg-transparent focus:outline-none border-b-2 border-slate-500 appearance-none" name="message" placeholder="Your Message" onChange={(e) => setForm({ ...formState, message: e.target.value })} />
 
-                        <button className="bg-slate-500 hover:bg-slate-400 font-semibold text-lg px-11 py-3 rounded-md" type="submit" >
+                        <button className="bg-slate-500 hover:bg-slate-400 font-semibold text-lg px-11 py-3 rounded-md disabled:cursor-not-allowed" type="submit" disabled={isLoading} >
                             Send
                         </button>
                     </form>

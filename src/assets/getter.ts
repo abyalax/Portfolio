@@ -18,6 +18,9 @@ import blogCMS from "./img/blog-cms.png"
 import githubIcon from "./svg/github.svg"
 import linkIcon from "./svg/link.svg"
 import groq from "./img/groq.png"
+import twitter from "./svg/twitter.svg"
+import instagram from "./svg/instagram.svg"
+import linkedin from "./svg/linkedin.svg"
 
 const tools = {
     nodejs, html, css, ts, vscode, react, tailwinds,
@@ -34,5 +37,9 @@ const svgIcon = {
     githubIcon, linkIcon
 }
 
+const socmedIcon = {
+    twitter, instagram, linkedin
+}
 
-export { tools, projects, svgIcon }
+
+export { tools, projects, svgIcon, socmedIcon }

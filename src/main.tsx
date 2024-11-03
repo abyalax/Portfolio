@@ -2,8 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App';
-import Blog from './components/pages/Blog';
-import Portfolio from './components/pages/Portfolios';
+import Blog from './pages/Blog';
+import Portfolio from './pages/Portfolio';
+import Portfolios from './pages/Portfolios';
+import { ToasterProvider } from './context/ToasterContext';
 
 const routes = [
   {
@@ -16,6 +18,10 @@ const routes = [
   },
   {
     path: '/portfolio',
+    element: <Portfolios />
+  },
+  {
+    path: '/portfolio/:id',
     element: <Portfolio />
   },
 ]
@@ -26,7 +32,9 @@ const rootElement = document.getElementById("root");
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <ToasterProvider>
+        <RouterProvider router={router} />
+      </ToasterProvider>
     </StrictMode>
   );
 } else {
