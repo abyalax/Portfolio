@@ -8,11 +8,11 @@ const Navbar = () => {
                     <h2 className="lg:block md:block hidden">Abya</h2>
                 </div>
                 <div className="flex flex-row lg:gap-16 md:gap-10 gap-4 sm:gap-8 h-full w-full justify-center sm:justify-center md:justify-end lg:justify-end text-white sm:font-semibold">
-                    <a href="/#home" className="h-full">Home</a>
-                    <a href="/#skill" className="h-full">Skills</a>
-                    <a href="/#about" className="h-full">About</a>
-                    <Link to="/portfolio" className="h-full">Portfolio</Link>
-                    <Link to="/blog" className="h-full">Blog</Link>
+                    <a href="/#home" className="h-full hover:text-yellow-500">Home</a>
+                    <a href="/#skill" className="h-full hover:text-yellow-500">Skills</a>
+                    <a href="/#about" className="h-full hover:text-yellow-500">About</a>
+                    <Link to="/portfolio" className="h-full hover:text-yellow-500">Portfolio</Link>
+                    <Link to="/blog" className="h-full hover:text-yellow-500">Blog</Link>
                 </div>
             </div>
         </div>

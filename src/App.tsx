@@ -5,7 +5,6 @@ import About from "./components/fragments/About"
 import Skills from "./components/fragments/Skills"
 import Contact from "./components/fragments/Contact"
 import Footer from "./components/fragments/Footer"
-import Featured from "./components/fragments/Featured"
 function App() {
 
   return (
@@ -14,7 +13,7 @@ function App() {
       <Home />
       <Skills />
       <About />
-      <Featured />
+      {/* <Featured /> */}
       <Contact />
       <Footer />
     </div>

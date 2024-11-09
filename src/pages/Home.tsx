@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ToasterContext } from "../context/ToasterContext";
+import TypingAnimation from "../utils/typing";
 
 const Home = () => {
     const [visible, setVisible] = useState(false);
@@ -45,7 +46,9 @@ const Home = () => {
             <div className="flex flex-col gap-2  px-6 sm:px-12 md:px-16 lg:px-20">
                 <h2 className=" text-2xl text-white font-bold my-3 sm:mt-4 md:text-left lg:text-left sm:text-center lg:block hidden">Hello Buddy🙌</h2>
                 <h2 className="lg:text-6xl text-white font-bold md:text-left lg:text-left sm:text-center sm:mt-6 mt-4 sm:text-3xl">I'am <span className="text-green-500">Abya Bahari Wafdulloh</span></h2>
-                <p className="text-[#808080] lg:text-xl sm:text-lg font-semibold sm:mb-5 md:mb-10">Fullstack developer</p>
+                <p className="lg:text-xl sm:text-lg font-semibold sm:mb-5 md:mb-10 bg-gradient-to-r from-green-400 via-blue-500 to-blue-800 inline-block text-transparent bg-clip-text">|
+                    <TypingAnimation text={["Fullstack developer", "Web developer", "Frontend developer", "Backend developer", "Fullstack developer", "Backend developer"]} speed={50}/>
+                </p>
                 <hr className="text-[#808080] w-1/3" />
                 <p className="lg:text-xl sm:text-lg text-[#808080] font-semibold">
                     Computer Engineering student who is enthusiastic and has a passion for the software development.
@@ -54,10 +57,10 @@ const Home = () => {
                     Committed to continuing to learn and develop in the dynamic technology industry.
                 </p>
                 <div className="mt-7 flex gap-5 sm:flex-row flex-col">
-                    <button onClick={onButtonClick} className="bg-green-500 font-semibold text-white lg:text-xl sm:text-lg px-11 py-3 rounded-md">
+                    <button onClick={onButtonClick} className="bg-green-500 font-semibold text-white lg:text-xl sm:text-lg px-11 py-3 rounded-md hover:scale-90 hover:transition-transform">
                         Donwload CV
                     </button>
-                    <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent border text-white font-semibold lg:text-xl sm:text-lg px-11 py-3 rounded-md">
+                    <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent border text-white font-semibold lg:text-xl sm:text-lg px-11 py-3 rounded-md hover:scale-90 hover:transition-transform">
                         Details
                     </button>
                 </div>

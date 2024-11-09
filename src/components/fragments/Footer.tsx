@@ -7,11 +7,11 @@ const Footer = () => {
       <h2 className="text-center text-2xl text-[#aeaeae] mt-8">This portfolio website is still in the development stage</h2>
       <h2 className="text-center text-xl text-white font-semibold">Abya Laxx</h2>
       <div className="flex flex-row md:gap-8 gap-4 sm:gap-8 h-full w-full justify-center sm:justify-center text-white">
-        <a href="/#home" className="h-full">Home</a>
-        <a href="/#skill" className="h-full">Skills</a>
-        <a href="/#about" className="h-full">About</a>
-        <Link to="/portfolio" className="h-full">Portfolio</Link>
-        <Link to="/blog" className="h-full">Blog</Link>
+        <a href="/#home" className="h-full hover:text-yellow-500  ">Home</a>
+        <a href="/#skill" className="h-full hover:text-yellow-500 ">Skills</a>
+        <a href="/#about" className="h-full hover:text-yellow-500 ">About</a>
+        <Link to="/portfolio" className="h-full hover:text-yellow-500 ">Portfolio</Link>
+        <Link to="/blog" className="h-full hover:text-yellow-500  ">Blog</Link>
       </div>
 
       <div className="w-full flex justify-center items-center gap-4 py-3">

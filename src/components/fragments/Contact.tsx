@@ -79,7 +79,7 @@ const Contact = () => {
                         <input className="min-h-11 bg-transparent focus:outline-none border-b-2 border-slate-500 appearance-none" type="number" min={9} name="phone" placeholder="Your Phone" onChange={(e) => setForm({ ...formState, from_phone: e.target.value })} />
                         <textarea className="bg-transparent focus:outline-none border-b-2 border-slate-500 appearance-none" name="message" placeholder="Your Message" onChange={(e) => setForm({ ...formState, message: e.target.value })} />
 
-                        <button className="bg-slate-500 hover:bg-slate-400 font-semibold text-lg px-11 py-3 rounded-md disabled:cursor-not-allowed" type="submit" disabled={isLoading} >
+                        <button className="bg-slate-500 hover:bg-slate-400 font-semibold text-lg px-11 py-3 rounded-md disabled:cursor-not-allowed" type="submit" disabled={isLoading}>
                             Send
                         </button>
                     </form>

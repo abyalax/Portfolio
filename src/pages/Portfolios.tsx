@@ -1,6 +1,6 @@
-import { svgIcon } from "../assets/getter";
+import { svgIcon } from "../utils/getter";
 import Navbar from "../components/fragments/Navbar";
-import { portfolio } from "../assets/portfolio";
+import { portfolio } from "../utils/portfolio/index"
 import { useNavigate } from "react-router-dom";
 
 const Portfolios = () => {
@@ -18,7 +18,7 @@ const Portfolios = () => {
           {portfolio.map((project) => (
             <div onClick={() => navigate(`/portfolio/${project.id}`)} key={project.id} className="lg:col-span-1 my-2 bg-[#1D1D1D] min-w-56 sm:w-full p-4 rounded-xl flex flex-col justify-between cursor-pointer">
               <div className="cursor-pointer">
-                <img src={project.img} className="rounded-md" />
+                <img src={project.img[0]} className="rounded-md" />
                 <h2 className="text-white text-center text-lg mt-2">{project.title}</h2>
                 <p className="text-[#808080] my-4">{project.description}</p>
               </div>
