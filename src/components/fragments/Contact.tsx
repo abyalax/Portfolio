@@ -17,9 +17,9 @@ const Contact = () => {
     }, [formState])
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        setIsLoading(true)
         e.preventDefault();
         try {
-            setIsLoading(true);
             fetch('https://api.emailjs.com/api/v1.0/email/send', {
                 method: 'POST',
                 headers: {

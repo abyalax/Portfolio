@@ -1,10 +1,25 @@
 import { projects } from "../getter"
-export const portfolio = [
+
+type PortfolioType = {
+    id: number
+    title: string
+    description: string
+    img: string[]
+    techStack: string
+    urlGithub: string
+    urlWeb: string
+    feature: {
+        title: string
+        description: string
+    }[]
+}[]
+
+export const portfolio: PortfolioType = [
     {
         id: 1,
         title: "Personal Website",
         description: "My Personal Website",
-        img: [projects.webProfile],
+        img: projects.webProfile,
         techStack: "React JS, Tailwinds",
         urlGithub: "https://github.com/abyalax/Portfolio",
         urlWeb: "https://profile-abya.vercel.app/",
@@ -17,14 +32,24 @@ export const portfolio = [
     },
     {
         id: 2,
+        title: "Aplikasi HRIS",
+        description: "Human Resource Information System",
+        img: projects.hris,
+        techStack: "Next JS 14, Tailwinds",
+        urlGithub: "https://github.com/abyalax/Portfolio",
+        urlWeb: "https://profile-abya.vercel.app/",
+        feature: [
+            {
+                title: "Human Resource Information System",
+                description: "Human Resource Information System for Company",
+            },
+        ]
+    },
+    {
+        id: 3,
         title: "Clone Tokopedia",
         description: "Project MERN Stack for Learning by Studi Case",
-        img: [
-            projects.tokopedia,projects.tokopediaProducts, projects.tokopediaProduct,
-            projects.tokopediaLogin, projects.tokopediaRegister, projects.tokopediaCreateStore1,
-            projects.tokopediaCreateStore2, projects.tokopediaSeller1, projects.tokopediaSeller2,
-            projects.tokopediaAddProduct1, projects.tokopediaAddProduct2
-        ],
+        img: projects.tokopedia,
         techStack: "MongoDB, Express JS, React JS, Node JS",
         urlGithub: "https://github.com/abyalax/Project-MERN-Frontend",
         urlWeb: "https://fake-tokopedia.vercel.app",
@@ -52,10 +77,10 @@ export const portfolio = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: "Groq AI Chatbot",
         description: "Project React for Chat with AI",
-        img: [projects.groqDark, projects.groqLight, projects.groqLightChat, projects.groqDarkChat],
+        img: projects.groq,
         techStack: "React JS, Tailwinds",
         urlGithub: "https://github.com/abyalax/Mobile-App-CMS",
         urlWeb: "https://groq-chatbot-red.vercel.app",
@@ -71,10 +96,10 @@ export const portfolio = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         title: "Sistem Informasi Invoice",
         description: "Project Fullstack From Course Next JS with Typescript",
-        img: [projects.invoicesDashboard, projects.invoicesHome, projects.invoicesLogin, projects.invoicesDashboard, projects.invoicesList],
+        img: projects.invoices,
         techStack: "Next JS, PostgreSQL, Tailwinds",
         urlGithub: "https://github.com/abyalax/NextJS-course",
         urlWeb: "https://next-js-course-mauve-ten.vercel.app/",
@@ -94,10 +119,10 @@ export const portfolio = [
         ]
     },
     {
-        id: 5,
+        id: 6,
         title: "Blog App Mobile",
         description: "Project React Native with Expo for my Learning Journey at Mobile Development",
-        img: [projects.blogCMS],
+        img: projects.blogCMS,
         techStack: "React Native",
         urlGithub: "https://github.com/abyalax/Mobile-App-CMS",
         urlWeb: "",

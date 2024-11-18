@@ -32,7 +32,7 @@ const Home = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [setToaster]);
 
     return (
         <div className="flex flex-col-reverse sm:p-10 lg:pr-32 lg:pl-0 sm:flex-col-reverse lg:flex-row pt-0" id="home">
