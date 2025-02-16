@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { portfolio } from "../utils/portfolio/index"
-import Portfolios from "./Portfolios";
-import Navbar from "../components/fragments/Navbar";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../components/fragments/Footer";
+import { portfolio } from "../../utils/portfolio";
+import Navbar from "../../components/fragments/Navbar";
+import Footer from "../../components/fragments/landing/Footer";
+import Projects from "./projects";
 
-const Portfolio = () => {
+const Project = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(false);
   const { id } = useParams();
@@ -85,9 +85,9 @@ const Portfolio = () => {
       </div>
     )
   } else {
-    return <Portfolios />
+    return <Projects />
   }
 
 };
 
-export default Portfolio;
+export default Project;

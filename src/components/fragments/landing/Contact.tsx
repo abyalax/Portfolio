@@ -1,5 +1,5 @@
 import { FormEvent, useContext, useEffect, useState } from "react";
-import { ToasterContext } from "../../context/ToasterContext";
+import { ToasterContext } from "../../../context/ToasterContext";
 
 const Contact = () => {
     const { setToaster } = useContext(ToasterContext)

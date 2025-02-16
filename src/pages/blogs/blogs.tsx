@@ -1,4 +1,4 @@
-import Navbar from "../components/fragments/Navbar";
+import Navbar from "../../components/fragments/Navbar";
 
 
 const Blog = () => {

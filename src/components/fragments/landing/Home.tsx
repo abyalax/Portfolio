@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { ToasterContext } from "../context/ToasterContext";
-import TypingAnimation from "../utils/typing";
+import { ToasterContext } from "../../../context/ToasterContext";
+import TypingAnimation from "../../../utils/typing";
+import Magnet from "../../animations/magnet";
+import SplitText from "../../animations/text/split";
+import GradientText from "../../animations/text/gradient";
 
 const Home = () => {
     const [visible, setVisible] = useState(false);
@@ -44,10 +47,18 @@ const Home = () => {
                 </button>
             )}
             <div className="flex flex-col gap-2  px-6 sm:px-12 md:px-16 lg:px-20">
-                <h2 className=" text-2xl text-white font-bold my-3 sm:mt-4 md:text-left lg:text-left sm:text-center lg:block hidden">Hello Buddy🙌</h2>
-                <h2 className="lg:text-6xl text-white font-bold md:text-left lg:text-left sm:text-center sm:mt-6 mt-4 sm:text-3xl">I'am <span className="text-green-500">Abya Bahari Wafdulloh</span></h2>
+                <SplitText textAlign="left" text="Hello Buddy🙌" className="text-3xl text-white font-bold my-3 sm:mt-4 md:text-left lg:text-left sm:text-center lg:block hidden" />
+                <h2 className="lg:text-6xl font-bold text-white md:text-left lg:text-left sm:text-center sm:mt-6 mt-4 sm:text-3xl">
+                    {"I'am "}
+                </h2>
+                <GradientText
+                    className="lg:text-6xl font-bold md:text-left lg:text-left sm:text-center sm:text-3xl"
+                    colors={["#e3f032", "#32f091", "#5ef032"]}
+                    animationSpeed={2}>
+                    {"Abya Bahari Wafdulloh"}
+                </GradientText>
                 <p className="lg:text-xl sm:text-lg font-semibold sm:mb-5 md:mb-10 bg-gradient-to-r from-green-400 via-blue-500 to-blue-800 inline-block text-transparent bg-clip-text">|
-                    <TypingAnimation text={["Fullstack developer", "Web developer", "Frontend developer", "Backend developer", "Fullstack developer", "Backend developer"]} speed={50}/>
+                    <TypingAnimation text={["Fullstack developer", "Web developer", "Frontend developer", "Backend developer", "Fullstack developer", "Backend developer"]} speed={50} />
                 </p>
                 <hr className="text-[#808080] w-1/3" />
                 <p className="lg:text-xl sm:text-lg text-[#808080] font-semibold">
@@ -57,9 +68,11 @@ const Home = () => {
                     Committed to continuing to learn and develop in the dynamic technology industry.
                 </p>
                 <div className="mt-7 flex gap-5 sm:flex-row flex-col">
-                    <button onClick={onButtonClick} className="bg-green-500 font-semibold text-white lg:text-xl sm:text-lg px-11 py-3 rounded-md hover:scale-90 hover:transition-transform">
-                        Donwload CV
-                    </button>
+                    <Magnet>
+                        <button onClick={onButtonClick} className="bg-green-500 font-semibold text-white lg:text-xl sm:text-lg px-11 py-3 rounded-md hover:scale-90 hover:transition-transform">
+                            Donwload CV
+                        </button>
+                    </Magnet>
                     <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent border text-white font-semibold lg:text-xl sm:text-lg px-11 py-3 rounded-md hover:scale-90 hover:transition-transform">
                         Details
                     </button>
@@ -74,7 +87,7 @@ const Home = () => {
                     <div className="w-full h-full bg-green-400 absolute top-0 left-0"></div>
                 </div>
                 {/* <!-- Profile Image --> */}
-                <img src="profile1.png" alt="Profile" className="relative object-cover object-center z-10 lg:w-full sm:w-72 sm:h-72 w-52 lg:h-96 rounded-full border-4 border-slate-500" />
+                <img src="/profile1.png" alt="Profile" className="relative object-cover object-center z-10 lg:w-full sm:w-72 sm:h-72 w-52 lg:h-96 rounded-full border-4 border-slate-500" />
                 <h2 className="relative text-2xl text-white font-bold lg:block hidden">Let's Connect </h2>
                 <h2 className="relative text-2xl text-white font-bold sm:block lg:hidden">Let's Connect Buddy </h2>
                 <div className="relative flex gap-3 mt-2 text-white">

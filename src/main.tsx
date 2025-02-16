@@ -1,11 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import App from './App';
-import Blog from './pages/Blog';
-import Portfolio from './pages/Portfolio';
-import Portfolios from './pages/Portfolios';
 import { ToasterProvider } from './context/ToasterContext';
+import { createRoot } from 'react-dom/client'
+import Blog from './pages/blogs/blogs';
+import App from './App';
+import 'react-quill/dist/quill.snow.css';
+import { ModalProvider } from './context/ModalContext';
+import Projects from './pages/projects/projects';
+import Project from './pages/projects/project';
 
 const routes = [
   {
@@ -17,12 +18,12 @@ const routes = [
     element: <Blog />
   },
   {
-    path: '/portfolio',
-    element: <Portfolios />
+    path: '/projects',
+    element: <Projects />
   },
   {
-    path: '/portfolio/:id',
-    element: <Portfolio />
+    path: '/projects/:id',
+    element: <Project />
   },
 ]
 
@@ -31,11 +32,11 @@ const rootElement = document.getElementById("root");
 
 if (rootElement) {
   createRoot(rootElement).render(
-    <StrictMode>
-      <ToasterProvider>
+    <ToasterProvider>
+      <ModalProvider>
         <RouterProvider router={router} />
-      </ToasterProvider>
-    </StrictMode>
+      </ModalProvider>
+    </ToasterProvider>
   );
 } else {
   console.error("Failed to find the root element");

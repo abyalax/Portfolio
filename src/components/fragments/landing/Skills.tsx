@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { tools } from "../../utils/getter";
+import { tools } from "../../../utils/getter";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 

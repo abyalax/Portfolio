@@ -36,8 +36,8 @@ export const portfolio: PortfolioType = [
         description: "Human Resource Information System",
         img: projects.hris,
         techStack: "Next JS 14, Tailwinds",
-        urlGithub: "https://github.com/abyalax/Portfolio",
-        urlWeb: "https://profile-abya.vercel.app/",
+        urlGithub: "https://github.com/abyalax/Project-HRIS-NextJS",
+        urlWeb: "https://hris-projects.vercel.app/",
         feature: [
             {
                 title: "Human Resource Information System",

@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import CreateContent from "../../ui/quill/create-content";
+import { useContext } from "react";
+import { ModalContext, ModalContextType } from "../../../context/ModalContext";
 
 const Footer = () => {
+
+  const { createContent }: ModalContextType = useContext(ModalContext)
+
   return (
     <footer className="bg-[#1E1E1E] flex gap-5 flex-col justify-between mt-24 items-center">
 
@@ -10,8 +16,8 @@ const Footer = () => {
         <a href="/#home" className="h-full hover:text-yellow-500  ">Home</a>
         <a href="/#skill" className="h-full hover:text-yellow-500 ">Skills</a>
         <a href="/#about" className="h-full hover:text-yellow-500 ">About</a>
-        <Link to="/portfolio" className="h-full hover:text-yellow-500 ">Portfolio</Link>
-        <Link to="/blog" className="h-full hover:text-yellow-500  ">Blog</Link>
+        <Link to="/projects" className="h-full hover:text-yellow-500 ">Portfolio</Link>
+        <Link to="/blogs" className="h-full hover:text-yellow-500  ">Blog</Link>
       </div>
 
       <div className="w-full flex justify-center items-center gap-4 py-3">
@@ -35,6 +41,13 @@ const Footer = () => {
       <div className="flex justify-center items-center text-white w-full p-5 bg-black">
         <p>© 2024 <b className="text-green-600">AbyaLaxx</b> All Rights Reserved, Inc</p>
       </div>
+      <button onClick={() => createContent((
+        <div className="h-fit bg-white">
+          <CreateContent />
+        </div>
+      ))}>
+        Create Content
+      </button>
     </footer>
   )
 };
