@@ -1,0 +1,25 @@
+[
+    {
+        "id": 5,
+        "title": "Profile and CMS GenBI Organization",
+        "description": "branding organisasi penerima Beasiswa Bank Indonesia sekaligus tempat untuk platform berita, artikel tentang GenBI, dan proker yang akan serta sudah dijalankan oleh organisasi GenBI di Universitas Islam Kadiri-Kediri.  ",
+        "techStack": "Next JS, NextAuth, Tailwind and Tanstack",
+        "githubURL": "https://github.com/abyalax/Projects-GENBI",
+        "demoURL": "https://projects-genbi.vercel.app/",
+        "content": "\"<h1>Profile and Blog CMS GenBI Organization</h1><h2>Ringkasan</h2><p>Web ini berfungsi sebagai branding organisasi penerima Beasiswa Bank Indonesia sekaligus tempat untuk platform berita, artikel tentang GenBI, dan proker yang akan serta sudah dijalankan oleh organisasi GenBI di Universitas Islam Kadiri-Kediri.</p><h2>Latar Belakang</h2><h3>Masalah/Kebutuhan</h3><ul><li>Meningkatkan branding organisasi GenBI melalui website dengan optimalisasi pada search engine optimization (SEO).</li><li>Menyediakan platform yang terstruktur untuk menyebarkan informasi terkait GenBI kepada anggota dan masyarakat umum.</li><li>Memudahkan pengelolaan konten organisasi dalam satu sistem yang aman dan mudah digunakan.</li></ul><h3>Motivasi</h3><ul><li>Sebagai program kerja dari divisi Kominfo untuk melakukan branding organisasi GenBI.</li><li>Meningkatkan transparansi dan aksesibilitas informasi terkait kegiatan, artikel, dan agenda organisasi.</li><li>Mendorong digitalisasi dan modernisasi sistem informasi dalam organisasi.</li></ul><h2>Fitur Utama</h2><ul><li><strong>Profile organisasi GenBI </strong>Informasi tentang GenBI, termasuk sejarah, struktur organisasi, dan visi-misi.</li><li><strong>Agenda organisasi GenBI </strong>Agenda program kerja organisasi dengan tampilan kalender interaktif.</li><li><strong>Blog News, Artikel, dan Informasi kegiatan GenBI </strong>Platform untuk menyebarkan informasi, berita, dan artikel terkait GenBI.</li><li><strong>Halaman Admin GenBI dengan proteksi autentikasi </strong>Dashboard admin untuk mengelola website, termasuk manajemen artikel, agenda, dan profil organisasi.</li></ul><h2>Teknologi</h2><ul><li><strong>Frontend:</strong>&nbsp;Next.js, Tailwind CSS, Tanstack</li><li><strong>Backend:</strong>&nbsp;Next.js API Routes</li><li><strong>Database:</strong>&nbsp;MySQL </li><li><strong>Authentication:</strong>&nbsp;Next Auth</li><li><strong>Media Storage:</strong>&nbsp;Cloudinary</li><li><strong>Tools Lain:</strong>&nbsp;Vercel (Deployment), GitHub (Version Control), TanStack Table (Data Table)</li></ul><h3>Alur Kerja</h3><ol><li>Admin login melalui halaman autentikasi.</li><li>Admin dapat mengelola konten seperti profil organisasi, agenda, dan blog dari dashboard.</li><li>Pengunjung dapat mengakses informasi tentang GenBI melalui website.</li><li>Sistem melakukan optimasi SEO agar konten lebih mudah ditemukan di mesin pencari.</li></ol><h2>Implementasi &amp; Pengembangan</h2><h3>Pendekatan</h3><p>Metodologi&nbsp;<strong>Agile</strong>&nbsp;dengan pendekatan&nbsp;<strong>Scrum</strong>, terdiri dari sprint dalam pengembangan fitur.</p><p><strong>Issue tracking</strong>&nbsp;menggunakan GitHub Projects atau Trello untuk pengelolaan tugas.</p><h3>Tahapan</h3><ol><li><strong>Perencanaan : </strong>Menentukan kebutuhan fitur dan merancang wireframe.</li><li><strong>Pengembangan : </strong>Membangun frontend dengan Next.js dan backend dengan API Routes serta mengimplementasikan autentikasi dengan NextAuth beserta session managementnya.</li><li><strong>Pengujian : </strong>Melakukan pengujian unit, integrasi, dan UI untuk memastikan fitur berjalan dengan baik.</li><li><strong>Deployment : </strong>Menggunakan Vercel untuk hosting free. Rencana web akan di hosting ikut web kampus dengan sub domain.</li></ol><h3>Challenges &amp; Solusi</h3><ul><li><strong>Optimasi SEO </strong>Menggunakan teknik server-side rendering (SSR) di Next.js untuk meningkatkan ranking di mesin pencari.</li><li><strong>Keamanan autentikasi admin </strong>Menggunakan Next Auth untuk memastikan hanya admin yang dapat mengakses dashboard.</li><li><strong>Manajemen media (gambar, file) </strong>Menyimpan dan mengelola media menggunakan Cloudinary agar lebih efisien.</li><li><strong>Kinerja database </strong>Menggunakan MySQL untuk manajemen data.</li></ul><h1><br></h1>\"",
+        "type": "real",
+        "published": false,
+        "createdAt": "2025-02-20 13:43:37.591",
+        "updatedAt": "2025-02-20 13:43:37.591"
+    },
+    {
+        "title": "Profile and CMS GenBI Organization",
+        "description": "Branding organisasi penerima Beasiswa Bank Indonesia sekaligus tempat untuk platform berita, artikel tentang GenBI, dan proker yang akan serta sudah dijalankan oleh organisasi GenBI di Universitas Islam Kadiri-Kediri.  ",
+        "techStack": "Next JS, NextAuth, Tailwind and Tanstack",
+        "githubURL": "https://github.com/abyalax/Projects-GENBI",
+        "demoURL": "https://projects-genbi.vercel.app/",
+        "imageURL": "/assets/quill/",
+        "content": "",
+        "type": "real"
+    }
+]
