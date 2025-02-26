@@ -82,7 +82,6 @@ const CreateProjects = () => {
             <option value="dummy">Dummy</option>
           </select>
           <h3 className="mt-1 text-sm font-normal">Image Showcase</h3>
-          {/* <input onChange={handlerChangeImage} multiple type="file" className="border border-gray-400 w-full px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-400 rounded-lg" /> */}
           <CldUploadWidget
             uploadPreset="profile"
             options={{ multiple: true, folder: "profile", maxFiles: 10, uploadPreset: "profile", cloudName: "dllhxulpv" }}
