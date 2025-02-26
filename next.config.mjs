@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
-  trailingSlash: true,
-  output: 'standalone',
+  reactStrictMode: true,
   images: {
+    domains: ['res.cloudinary.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -11,13 +10,6 @@ const nextConfig = {
         port: '',
       },
     ],
-  },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /node_modules\/@fullcalendar\/.*\.css$/,
-      use: ["style-loader", "css-loader"],
-    });
-    return config;
   },
 };
 
