@@ -4,7 +4,7 @@ import { FaChevronDown, FaChevronRight, FaTrash } from "react-icons/fa"
 import { Project } from "@prisma/client";
 import { formatDate } from "@/utils/utils";
 import Image from "next/image";
-import Checkbox from "../../../ui/checkbox";
+import Checkbox from "../../../ui/Checkbox";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 

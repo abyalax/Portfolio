@@ -40,7 +40,7 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
 
     if (project) {
         return (
-            <div className="bg-[#272727] min-h-screen">
+            <div className="bg-black min-h-screen">
                 <Navbar />
                 <button onClick={() => router.back()} className="bg-slate-300 ml-20 flex items-center justify-center font-semibold lg:text-xl sm:text-lg px-3 py-1 rounded-md hover:scale-90 hover:transition-transform">
                     <svg className="text-slate-500 rotate-180" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" stroke="currentColor" strokeWidth="2" viewBox="0 0 16 16">

@@ -1,5 +1,5 @@
 import { useSprings, animated, SpringConfig } from '@react-spring/web';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 interface SplitTextProps {
     text?: string;
@@ -35,12 +35,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setInView(true);
-                    if (ref.current) {
-                        observer.unobserve(ref.current);
-                    }
-                }
+                setInView(entry.isIntersecting);
             },
             { threshold, rootMargin }
         );
@@ -54,7 +49,7 @@ const SplitText: React.FC<SplitTextProps> = ({
 
     const springs = useSprings(
         letters.length,
-        letters.map((_, i) => ({
+        useMemo(() => letters.map((_, i) => ({
             from: animationFrom,
             to: inView
                 ? async (next: (props: any) => Promise<void>) => {
@@ -67,7 +62,8 @@ const SplitText: React.FC<SplitTextProps> = ({
                 : animationFrom,
             delay: i * delay,
             config: { easing },
-        }))
+            reset: true
+        })), [inView])
     );
 
     return (
@@ -82,7 +78,6 @@ const SplitText: React.FC<SplitTextProps> = ({
                         const index = words
                             .slice(0, wordIndex)
                             .reduce((acc, w) => acc + w.length, 0) + letterIndex;
-
                         return (
                             <animated.span
                                 key={index}

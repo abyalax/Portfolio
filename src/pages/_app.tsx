@@ -4,16 +4,16 @@ import 'react-markdown-editor-lite/lib/index.css';
 import { ToasterProvider } from "@/context/ToasterContext";
 import { ModalProvider } from "@/context/ModalContext";
 import type { AppProps } from "next/app";
-import { DataProvider } from "@/context/DataContext";
+import { HydrationProvider } from "@/context/HydrationContext";
 
 export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <DataProvider>
+    <HydrationProvider>
       <ToasterProvider>
         <ModalProvider>
-          <Component {...pageProps} />
+            <Component {...pageProps} />
         </ModalProvider>
       </ToasterProvider>
-    </DataProvider>
+    </HydrationProvider>
   )
 }

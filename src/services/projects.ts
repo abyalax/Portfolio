@@ -29,10 +29,7 @@ export const getProjectByID = async (id: number) => {
 
 export const getRealProjects = async () => {
     try {
-        console.log(process.env.DATABASE_URL);
-        // const projectReal = await prisma.project.findMany({ where: { type: "real" }, orderBy: { createdAt: "desc" } })
-        const projectReal = await prisma.project.findMany()
-        console.log('Result get real project',projectReal);
+        const projectReal = await prisma.project.findMany({ where: { type: "real" }, orderBy: { createdAt: "desc" } })
         return projectReal.map((project) => ({
             ...project,
             createdAt: project.createdAt.toISOString(),
@@ -46,10 +43,8 @@ export const getRealProjects = async () => {
 
 export const getDumyProjects = async () => {
     try {
-        // const projectDummy = await prisma.project.findMany({ where: { type: "dummy" }, orderBy: { createdAt: "desc" } })
-        const projectDummy = await prisma.project.findMany()
-        console.log('Result get dummy project',projectDummy);
-        
+        const projectDummy = await prisma.project.findMany({ where: { type: "dummy" }, orderBy: { createdAt: "desc" } })
+
         return projectDummy.map((project) => ({
             ...project,
             createdAt: project.createdAt.toISOString(),

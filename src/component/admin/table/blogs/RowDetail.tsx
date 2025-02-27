@@ -2,7 +2,6 @@ import { formatDate } from "@/utils/utils";
 import { Blog } from "@prisma/client";
 
 export default function RowDetailView({ blog }: { blog: Blog }) {
-  console.log({ blog });
   return (
     <div className="flex flex-col h-fit gap-4 px-24 py-5 border border-gray-500">
       <div className="max-w-[100vw] w-fit">

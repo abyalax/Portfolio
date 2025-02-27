@@ -20,8 +20,6 @@ const postValidation = z.object({
 })
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    console.log('req.method', req.method);
-    
     if (req.method === "GET") {
         const projects = await prisma.project.findMany();
         if (projects.length === 0) return res.status(404).json({ message: "No projects found" })
@@ -29,7 +27,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     else if (req.method === "POST") {
         const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-        console.log("body", body);
         const parsed = postValidation.safeParse(body)
         if (!parsed.success) return res.status(400).json({ message: parsed.error })
         const response = await prisma.project.create({

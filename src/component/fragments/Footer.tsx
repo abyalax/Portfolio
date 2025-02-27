@@ -1,24 +1,15 @@
 import Link from "next/link";
-import { useContext } from "react";
-import { ModalContext } from "@/context/ModalContext";
-import dynamic from "next/dynamic";
-
-const CreateProjects = dynamic(() => import("@/component/modal/CreateProjects"), { ssr: false })
 
 const Footer = () => {
 
-  const { createContent } = useContext(ModalContext);
   return (
-    <footer className="bg-[#1E1E1E] flex gap-5 flex-col justify-between mt-24 items-center">
+    <footer className="bg-[#1E1E1E] flex gap-5 flex-col justify-between mt-20 pt-14 items-center">
 
-      <h2 className="text-center text-2xl text-[#aeaeae] mt-8">This portfolio website is still in the development stage</h2>
-      <h2 className="text-center text-xl text-white font-semibold">Abya Laxx</h2>
       <div className="flex flex-row md:gap-8 gap-4 sm:gap-8 h-full w-full justify-center sm:justify-center text-white">
         <Link href="/#home" className="h-full hover:text-yellow-500  ">Home</Link>
         <Link href="/#skill" className="h-full hover:text-yellow-500 ">Skills</Link>
         <Link href="/#about" className="h-full hover:text-yellow-500 ">About</Link>
-        <Link href="/portfolio" className="h-full hover:text-yellow-500 ">Portfolio</Link>
-        <Link href="/blog" className="h-full hover:text-yellow-500  ">Blog</Link>
+        <Link href="/portfolio" className="h-full hover:text-yellow-500 ">Projects</Link>
       </div>
 
       <div className="w-full flex justify-center items-center gap-4 py-3">
@@ -42,9 +33,6 @@ const Footer = () => {
       <div className="flex justify-center items-center text-white w-full p-5 bg-black">
         <p>© 2024 <b className="text-green-600">AbyaLaxx</b> All Rights Reserved, Inc</p>
       </div>
-      <button onClick={() => createContent(<CreateProjects />)}>
-        Create Content
-      </button>
     </footer>
   )
 }

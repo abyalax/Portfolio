@@ -17,7 +17,7 @@ const ProjectsPage = ({ projectDummy, projectReal }: { projectReal: Project[], p
 
     const { push } = useRouter();
     return (
-        <div className="bg-[#272727] min-h-screen flex content-center flex-col gap-5">
+        <div className="bg-black min-h-screen flex content-center flex-col gap-5">
             <Navbar />
             <div className="lg:px-44 md:px-32 sm:px-20 px-5">
                 <h2 className="text-white lg:text-3xl md:text-xl sm:text-base text-center">Past Project Experience</h2>
@@ -26,7 +26,13 @@ const ProjectsPage = ({ projectDummy, projectReal }: { projectReal: Project[], p
                     {projectReal.map((project) => (
                         <div onClick={() => push(`/projects/${project.id}`)} key={project.id} className="lg:col-span-1 my-2 bg-[#1D1D1D] min-w-56 sm:w-full p-4 rounded-xl flex flex-col justify-between cursor-pointer">
                             <div className="cursor-pointer">
-                                <Image alt="" width={500} height={300} src={project.imageURL[0]} className="rounded-md" />
+                                {project.imageURL.length ? (
+                                    <Image alt="" width={500} height={300} src={project.imageURL[0]} className="rounded-md" />
+                                ) : (
+                                    <div className="flex justify-center items-center w-full h-full rounded-md bg-slate-300">
+                                        <h2>Image Preview Not Available</h2>
+                                    </div>
+                                )}
                                 <h2 className="text-white text-center text-lg mt-2">{project.title}</h2>
                                 <p className="text-[#808080] my-4">{project.description}</p>
                             </div>

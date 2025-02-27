@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import React, { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
 
 const DraggableWindow = dynamic(
-    () => import('@/component/ui/window').then((mod) => mod.default), { ssr: false })
+    () => import('@/component/ui/DraggableWindow').then((mod) => mod.default), { ssr: false })
 
 interface WindowState {
     windowElement: {

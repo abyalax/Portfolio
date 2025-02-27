@@ -43,11 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     const date = new Date();
                     const time = `${date.getHours()}-${date.getMinutes()}_${index}`;
                     const uniqueName = `${date.toISOString().replace(/:/g, "-").split("T")[0]}_${time}${ext}`;
-                    console.log('uniqueName:', uniqueName);
-
                     const newPath = path.join(uploadDir, uniqueName);
-                    console.log('Renaming from:', fileData.filepath, 'to:', newPath);
-
                     fs.rename(fileData.filepath, newPath, (err) => {
                         if (err) {
                             console.error("Error during file renaming:", err);

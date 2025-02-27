@@ -11,7 +11,28 @@ body {
   min-height: 100%;
 }
 
+.shape {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.shape::before {
+  content: "";
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  background: linear-gradient(to bottom right, #4ade80, #3b82f6);
+  border-radius: 50%;
+  opacity: 0.7;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  will-change: transform, opacity;
+}
+
 @layer base {
+
   h1,
   h2,
   h3,
@@ -24,9 +45,10 @@ body {
 }
 
 @layer base {
-  p, 
-  pre, 
-  ul, 
+
+  p,
+  pre,
+  ul,
   li,
   ol {
     margin: revert;
@@ -100,4 +122,3 @@ textarea {
     /* Chrome, Safari, and Opera */
   }
 }
-

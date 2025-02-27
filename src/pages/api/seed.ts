@@ -86,17 +86,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 data: [
                     {
                         title: 'Web Profile Portfolio',
-                        description: 'Personal Branding, Portfolio dan Blog',
+                        description: "Web Profile to showcase my projects, experience and skills in software development and latest technologies. I share articles, case studies, and projects I've built to provide insight of software development",
                         content: 'Lorem ipsum dolor sit amet',
-                        techStack: 'Next JS, NextAuth, Tailwind and Tanstack',
+                        techStack: 'Next JS, Tailwind CSS, Framer Motion and React Markdown',
                         githubURL: 'https://github.com/abyalax/Portfolio',
                         demoURL: 'https://profile-abya.vercel.app/',
-                        imageURL: [],
+                        imageURL: [
+                            "https://res.cloudinary.com/dllhxulpv/image/upload/v1740613184/profile/Screenshot_2025-02-27_061024_vj8mbk.png",
+                            "https://res.cloudinary.com/dllhxulpv/image/upload/v1740613217/profile/Screenshot_2025-02-27_062837_g7wdv0.png",
+                            "https://res.cloudinary.com/dllhxulpv/image/upload/v1740613183/profile/Screenshot_2025-02-27_062812_wt7r9y.png"
+                        ],
                         type: 'real'
                     },
                     {
                         title: 'Profile and CMS GenBI Organization',
-                        description: 'Branding organisasi penerima Beasiswa Bank Indonesia sekaligus tempat untuk platform berita, artikel tentang GenBI, dan proker yang akan serta sudah dijalankan oleh organisasi GenBI di Universitas Islam Kadiri-Kediri.',
+                        description: "Branding of the Bank Indonesia Scholarship recipient organization as well as a place for news platforms, articles about GenBI, and work projects that will and have been carried out by the GenBI organization at Universitas Islam Kadiri-Kediri.",
                         content: contentProjects,
                         techStack: 'Next JS, NextAuth, Tailwind and Tanstack',
                         githubURL: 'https://github.com/abyalax/Projects-GENBI',

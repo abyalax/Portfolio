@@ -1,19 +1,28 @@
-const tools = {
-    nodejs: "/assets/tools/nodejs.png",
-    html: "/assets/tools/html.webp",
-    css: "/assets/tools/css.webp",
-    ts: "/assets/tools/ts.webp",
-    vscode: "/assets/tools/vscode.png",
-    tailwinds: "/assets/tools/tailwinds.png",
-    react: "/assets/tools/react.webp",
-    postman: "/assets/tools/postman.png",
-    mongodb: "/assets/tools/mongodb.webp",
-    cloudinary: "/assets/tools/cloudinary.png",
-    git: "/assets/tools/git.webp",
-    github: "/assets/tools/github.webp",
-    js: "/assets/tools/js.webp",
-    nextjs: "/assets/tools/nextjs.png",
-}
+const techStack = {
+    highlight: [
+        { title: "Node.js", description: "Backend runtime", url: "/assets/tools/nodejs.png" },
+        { title: "Next.js", description: "React Server Side", url: "/assets/tools/nextjs.png" },
+        { title: "NestJS", description: "Scalable Backend", url: "/assets/tools/nestjs.webp" },
+        { title: "TypeScript", description: "Typed JavaScript", url: "/assets/tools/ts.webp" },
+        { title: "SQL", description: "Relational Database", url: "/assets/tools/sql.webp" },
+        { title: "MongoDB", description: "NoSQL database", url: "/assets/tools/mongodb.webp" },
+        { title: "Cloudinary", description: "Media storage", url: "/assets/tools/cloudinary.webp" },
+    ],
+    hidden: [
+        { title: "HTML", description: "Markup language", url: "/assets/tools/html.webp" },
+        { title: "CSS", description: "Styling language", url: "/assets/tools/css.webp" },
+        { title: "JavaScript", description: "Scripting language", url: "/assets/tools/js.webp" },
+        { title: "Tailwind CSS", description: "Utility-first CSS", url: "/assets/tools/tailwinds.png" },
+        { title: "React", description: "UI library", url: "/assets/tools/react.webp" },
+        { title: "VS Code", description: "Code editor", url: "/assets/tools/vscode.png" },
+        { title: "Postman", description: "API testing", url: "/assets/tools/postman.png" },
+        { title: "Git", description: "Version control", url: "/assets/tools/git.webp" },
+        { title: "GitHub", description: "Code hosting", url: "/assets/tools/github.webp" },
+    ],
+};
+
+
+
 
 const webProfileImage = "/assets/img/web-profile.png"
 const webProfile = [webProfileImage]
@@ -100,4 +109,4 @@ const svgIcon = { githubIcon, linkIcon }
 
 const socmedIcon = { twitter, instagram, linkedin }
 
-export { tools, projectsImg, svgIcon, socmedIcon, dummyFrontendImg }
+export { techStack, projectsImg, svgIcon, socmedIcon, dummyFrontendImg }
