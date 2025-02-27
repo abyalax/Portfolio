@@ -1,11 +1,10 @@
-import { FormEvent, ReactNode, useContext, useState } from "react";
-import { ModalContext } from "../../context/ModalContext";
+import { ModalContext } from "@/context/ModalContext";
+import { ReactNode, useContext, useState } from "react";
 import { forwardRef } from "react";
 
 const Modal = forwardRef<HTMLDivElement, { child: ReactNode }>(
     ({ child }, ref) => {
         const { createContent } = useContext(ModalContext)
-        const [key, setKey] = useState("");
         return (
             <div ref={ref} className="fixed inset-0 z-50 flex justify-center items-center">
                 <div className="absolute bg-black opacity-50 inset-0 "></div>

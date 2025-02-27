@@ -1,6 +1,6 @@
+import { ToasterContext } from "@/context/ToasterContext"
+import { ToasterType, VariantToaster } from "@/types/toaster"
 import { useContext } from "react"
-import { ToasterType, VariantToaster } from "../../types/toaster"
-import { ToasterContext } from "../../context/ToasterContext"
 
 
 const ToasterSuccessIcon = () => {

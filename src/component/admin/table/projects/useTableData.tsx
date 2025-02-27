@@ -4,9 +4,9 @@ import { FaChevronDown, FaChevronRight, FaTrash } from "react-icons/fa"
 import { Project } from "@prisma/client";
 import { formatDate } from "@/utils/utils";
 import Image from "next/image";
-import Checkbox from "../../../ui/Checkbox";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import Checkbox from "@/component/ui/Checkbox";
 
 const DISPLAY_COLUMN_SIZE = 100
 const columnHelper = createColumnHelper<Project>();

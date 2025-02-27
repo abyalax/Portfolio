@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { FaChevronDown, FaChevronRight, FaTrash } from "react-icons/fa"
 import { Blog } from "@prisma/client";
 import { formatDate } from "@/utils/utils";
-import Checkbox from "../../ui/Checkbox";
+import Checkbox from "@/component/ui/Checkbox";
 
 const DISPLAY_COLUMN_SIZE = 100
 const columnHelper = createColumnHelper<Blog>();
